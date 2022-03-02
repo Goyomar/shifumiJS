@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+body {
+    max-width: 1920px;
+    margin: auto;
+    background-image: url(img/La_Forêt_maudite.png);
+}
+
+#gameRound {
+    background-image:url(img/bandeauKonoha.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: rgb(47, 58, 79);
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    width : 50em;
+    height: 6em;
+    border: 4px solid darkslategrey;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameRound p {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#gameRound p span{
+    margin-right: 1em;
+}
+
+#board {
+    width: 1024px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#screen {
+    background-image: url(img/cascade.png);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    margin-top: 6vh;
+    margin: auto;
+    width: 1024px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap:4em;
+    align-items: center;
+    padding: 2em 2em;
+}
+
+#options {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+#scoreboardP1, #scoreboardP2 {
+    position: absolute;
+    width: 14em;
+    height: 25em;
+    background-color: lightslategray;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#scoreboardP1 p, #scoreboardP2 p{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+#scoreboardP1 {
+    background-image: url(img/P1.png);
+    left: 0;
+    transform: translate(-50%);
+}
+
+#scoreboardP2 {
+    background-image: url(img/P2.png);
+    right: 0;
+    transform: translate(50%);
+}
+
+.sign { 
+    border-radius: 10px;
+    width: 8em;
+    height: 8em;
+}
+
+.sign img {
+    width: 100%;
+}
+
+#rock, #scissors, #paper{
+    cursor:pointer;
+}
+
+#scissors {
+    border: 4px solid #F20000;
+    background-color: lightcoral;
+}
+
+#rock {
+    border: 4px solid #208FFF;
+    background-color: lightskyblue;
+}
+
+#paper {
+    border: 4px solid #555518;
+    background-color: lightgreen;
+}
+
+#resultbox{
+    height: 10em;
+    width: 45em;
+    display: flex;
+    align-items: center
+}
+
+#resultbox img{
+    height:13em;
+    width:13em;
+}
+
+#resultbox p{
+    font-weight: bold;
+    font-size: 2em;
+    width: 19em;
+    text-align: center;
+    border:6px solid #a06c0d90;
+    background-color: rgb(245, 222, 179, 0.90);
+    color: black;
+    padding: 10px 5px;
+    margin: 0px 10px;
+}
+
+#gameResult p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    border:6px solid #8b000090;
+    background-color: rgb(245, 222, 179, 0.90);
+    color: black;
+    padding: 10px 20px;
+}
+
+.win{
+    animation-duration: 2s;
+    animation-name: shinebright;
+}
+
+@keyframes shinebright{
+    from{
+        filter:brightness(1)
+    }
+    50%{
+        filter:brightness(1.5)
+    }
+
+    to{
+        filter:brightness(1)
+    }
+}
+
+.loose{
+    animation-duration: 2s;
+    animation-name: shinenobright;
+}
+
+@keyframes shinenobright{
+    from{
+        filter:brightness(1)
+    }
+    50%{
+        filter:brightness(50%)
+    }
+
+    to{
+        filter:brightness(1)
+    }
+}
+
+.even{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.coco{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+#theme{
+    cursor: pointer;
+    margin-top:2em;
+    width:120px;
+    height:4em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: lightyellow;
+    color: darkslategrey;
+    border: 5px solid #00000050;
+}

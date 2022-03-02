@@ -8,29 +8,33 @@
     <title>Shi Fu Mi</title>
 </head>
 <body>
-
     <div id="gameRound">
         <p>Partie : <span id="game">1</span> Manche : <span id="round">1</span> Egalité round : <span id="evenRound">0</span> Egalité : <span id="even">0</span></p>
     </div>
     <div id="board">
-        <div id="scoreboardP1">
-            <p>partie : <span id="gameP1">0</span></p>
-            <p> round : <span id="roundP1">0</span></p>
-            <p>total : <span id="totalRoundP1">0</span></p>
+        <div id="scoreboardP1" class="init">
+            <p>Partie : <span id="gameP1">0</span></p>
+            <p>Round : <span id="roundP1">0</span></p>
+            <p>Total : <span id="totalRoundP1">0</span></p>
         </div>
         <div id="screen">
-            <div class="init" id="rock">pierre</div>
-            <div class="init" id="paper">feuille</div>
-            <div class="init" id="scissors">ciseaux</div>
+            <div id="gameResult"></div>
+            <div class="init" id="resultbox"></div>   
+            <div id="options">        
+                <div class="sign" id="scissors"><img src="img/katon.png" alt="katon"></div>
+                <div class="sign" id="rock"><img src="img/suiton.png" alt="suiton"></div>
+                <div class="sign" id="paper"><img src="img/mokuton.png" alt="mokuton"></div>
+            </div> 
         </div>
-        <div class="init" id="resultbox"></div>
-        <div id="scoreboardP2">
-            <p>partie : <span id="gameP2">0</span></p>
-            <p>round : <span id="roundP2">0</span></p>
-            <p>total : <span id="totalRoundP2">0</span></p>
+        <div id="scoreboardP2" class="init">
+            <p>Partie : <span id="gameP2">0</span></p>
+            <p>Round : <span id="roundP2">0</span></p>
+            <p>Total : <span id="totalRoundP2">0</span></p>
         </div>
     </div>
-
+    <div class="coco">
+        <button id="theme">Pokemon</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
